@@ -1,0 +1,26 @@
+/* Extracted from the approved StroyProject Nordic page, 2026-10-12. */
+.theme-nordic {
+  --design-background: #101014;
+  --design-surface: #18191d;
+  --design-text: #efefeb;
+  --design-muted: #bbbcb8;
+  --design-primary: #c2aa78;
+  --design-line: #343538;
+  --design-tool-surface: #202227;
+  --design-body-font: Manrope, sans-serif;
+  --design-heading-font: Oswald, sans-serif;
+  --design-radius: 0px;
+  --design-space: 8px;
+  --bg: var(--design-background);
+  --surface: var(--design-surface);
+  --ink: var(--design-text);
+  --muted: var(--design-muted);
+  --accent: var(--design-primary);
+  --line: var(--design-line);
+  --tool-fill: var(--design-primary);
+  --tool-surface: var(--design-tool-surface);
+  --body: var(--design-body-font);
+}
+.theme-nordic :is(h1,h2,.case-caption h3,.brand) {
+  font-family: var(--design-heading-font);
+}
