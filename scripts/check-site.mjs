@@ -14,7 +14,7 @@ for(const file of required)if(!existsSync(resolve(site,file)))errors.push('Missi
 const version=readFileSync(resolve(root,'VERSION'),'utf8').trim(),metadata=JSON.parse(readFileSync(resolve(site,'version.json'),'utf8'));
 if(!/^\d+\.\d+\.\d+$/.test(version)||version!==metadata.version)errors.push('Version mismatch');
 if(!readFileSync(resolve(site,'index.html'),'utf8').includes('name="build-version" content="'+version+'"'))errors.push('HTML version mismatch');
-const allowed=new Set(['.html','.css','.js','.json','.webp','.woff2','.txt']);
+const allowed=new Set(['.html','.css','.js','.json','.webp','.woff2','.txt','.svg']);
 for(const file of files){
  const name=relative(site,file).replaceAll('\\','/');
  if(name!=='.nojekyll'&&!allowed.has(extname(file)))errors.push('Unexpected public file: '+name);
